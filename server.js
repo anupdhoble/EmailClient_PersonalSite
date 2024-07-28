@@ -24,7 +24,7 @@ app.post('/feedback', (req, res) => {
     logger.info(`Received feedback: ${feedback}`);
     
     // Send feedback to your inbox
-    sendEmail('feedback@anupdhoble.tech', 'Feedback Received', feedback);
+    sendEmail('feedback@anupdhoble.tech', 'Feedback Received: Email: ',email,"Feedback: ", feedback);
     
     // Send a custom message to the user
     sendEmail(userEmail, 'Thank You for Your Feedback', 'We appreciate your feedback!');
